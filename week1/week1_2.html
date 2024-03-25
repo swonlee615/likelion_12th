@@ -6,12 +6,13 @@
         <div class="frame">
             <div class="center">
                 <div class="pagination">
-                    <input type="radio" name="page">
-                    <input type="radio" name="page">
-                    <input type="radio" name="page">
-                    <input type="radio" name="page">
-                    <input type="radio" name="page">
-                    <input type="radio" name="page">
+                    <input class="index" type="radio" name="page">
+                    <input class="index" type="radio" name="page">
+                    <input class="index" type="radio" name="page">
+                    <br>
+                    <input class="index" type="radio" name="page">
+                    <input class="index" type="radio" name="page">
+                    <input class="index" type="radio" name="page">
                 </div>
             </div>
         </div>
@@ -38,10 +39,11 @@
   }
   
   .pagination{
-    display: flex; /*요소 1열 배치*/
-    gap: 30px;
     counter-reset:page;
-    flex-wrap : wrap;
+  }
+
+  .pagination .index{
+    margin: 15px;
   }
   
   input[type=radio]{
@@ -84,7 +86,7 @@
      border-radius: 20%;
      background: #fff;
      transform: scale(0);
-     transition: transform .5s ease-in-out;
+     transition: transform .3s ease-in-out;
   }
   .pagination input:hover {
      background: rgb(26, 44, 98);

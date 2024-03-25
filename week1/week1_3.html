@@ -2,7 +2,7 @@
     <head>
         
         <body>
-            <div class="">
+            <div class="container">
                 <div class="center">
                   <button class="btn">HOVER ME</button>
                 </div>
@@ -10,18 +10,34 @@
         </body>
         
         <style>
-        @import url(https://fonts.gstatic.com/s/workbench/v1/FeV8S05Gp6Et7FcfbPFK1rynGd_MxtkvNFmoUDFhgF2VKTGQk6vapePi2mOIhIya6rAvRw.woff2); format: ('woff2');
+        @import url(https://fonts.gstatic.com/s/workbench/v1/FeV8S05Gp6Et7FcfbPFK1rynGd_MxtkvNFmoUDFhgF2VKTGQk6vapePi2mOIhIya6rAvRw.woff2);
+
+        .container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin-top: -200px;
+            margin-left: -200px;
+            border-radius: 2px;
+            box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+            overflow: hidden;
+            color: #333;
+            background: #bf9fbd;
+            font-family: 'Open Sans', Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
 
 
         .center {
-            /* width: 50%;
-            height: 50%;
-            border: 10px solid black; */
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            }
+        }
 
 
         .btn {
