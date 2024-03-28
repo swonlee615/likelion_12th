@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --main-color : #13235d;
+    --white : #ffffff;
+}
+
+html {
+    font-family: 'SUITE_Regular', sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+
+
+
+.header {
+    display: flex;
+    justify-content: center; /* 자식 요소들을 가로축 중앙에 배치 */
+    align-items: center; /* 자식 요소들을 세로축 중앙에 배치 */
+    padding: 25px 0;
+    border: solid;
+    border-color: var(--white);
+    border-width: 0 0 5px 0;
+    font-weight: 800;
+    color: var(--white);
+    font-size: 2.3rem;
+    margin: 0 0 5px 0;
+    text-decoration: none;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    padding: 10px;
+}
+
+nav > li {
+    display: inline-block;
+    color: var(--main-color);
+    padding: 0 20px;
+    margin: 0 0 0 15px;
+}
+
+
+.categories {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px;
+    width: 150px;
+    background-color: var(--white);
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--main-color);
+    font-size: small;
+}
+
+.card > img {
+    width: 100%;
+    height: auto;
+}
+
+.card > span {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    background-color: var(--white);
+    padding: 5px;
+    margin: 30px 0;
+    border-bottom: 7px double var(--main-color);
+    border-top: 7px double var(--main-color);
+}
+
+
+#sec_font{
+    padding: 0 35px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--main-color);
+}
