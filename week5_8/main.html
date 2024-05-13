@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="./fabicon.png">
+    <title>자기소개페이지</title>
+</head>
+<body>
+    <div id="wrap">
+        <header> <!-- 헤더 nav 바 -->
+            <h1>Hello world</h1>
+
+            <div class="titlenav">
+                <p><a href="#main">Main</a></p>
+                <p><a href="#about">About</a></p>
+                <p><a href="#contact">Contact</a></p>
+            </div>
+        </header>
+
+
+        <main>
+            <section id="main"> <!-- 오프닝 -->
+                <div class="img_container">
+                    <img src="./main.png" alt="">
+                </div>
+                
+                <div class="txt_wrapper">
+                    <p class="txt">
+                        안녕하세요 :)
+                    </p>
+                    <p class="txt">
+                        인천대학교 멋쟁이사자처럼 12기
+                    </p>
+                    <p class="txt">
+                        프론트엔드 이승원입니다.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <section id="about"> <!-- 필수 포함 내용 -->
+                <p id="about_title">ABOUT</p>
+
+                <div class="about_container">
+                    <img class="left-image" src="./KKobuk.webp" alt="mypic">
+                
+                    <div class="about_detail">
+                        <div class="card">
+                            <div class="details"> <p class="detail_txt"> 학과 </p> </div>
+                            <div class="details-back"> <p id="detail"> 소비자학과 <br> 디자인학부 </p> </div>
+                        </div>
+                        <div class="card">
+                            <div class="details"> <p class="detail_txt"> 나이 </p> </div>                       
+                            <div class="details-back"> <p id="detail"> '만' 22세 </p> </div>                       
+                        </div>
+                        <div class="card">
+                            <div class="details"> <p class="detail_txt"> 취미 </p> </div>                        
+                            <div class="details-back"> <p id="detail"> 노래방가기 🎤 </p> </div>                       
+                        </div>
+                        <div class="card">
+                            <div class="details-img"> <img id="detail_img" src="./likelion.png" alt=""> </div>
+                            <div class="details-back"> <p id="detail"> 실버세대의 정신건강을 해결할 수 있는, 세대의 특성을 고려한 플랫폼을 만들어보고 싶어요! </p> </div>
+                        </div>
+                        <div class="card">
+                            <div class="details"> <p class="detail_txt"> 인생 영화 </p> </div> 
+                            <div class="details-back"> <p id="detail"> '악마는프라다를입는다' <br>  주인공의 성장 과정이 인상적이라 좋아합니다 ❤️ </span> </p> </div>                       
+                        </div>
+                        <div class="card">
+                            <div class="details"> <p class="detail_txt"> 음식 </p> </div>                      
+                            <div class="details-back"> <p id="detail"> 좋아하는 음식 : 떡볶이🌶️ <br> 못먹는 음식 : 딱히없음!😋 </p> </div>                       
+                        </div>
+                        <div class="card">
+                            <div class="details"> <p class="detail_txt"> 퀴즈 </p> </div>                      
+                            <div class="details-back"> <p id="detail"> 1. 저의 형제 관계를 맞춰보세요 <br> 2. 제가 쓰는 휴대폰 기종은 무엇일까요? <br> 3. 저는 N마리의 강아지를 키우고 있어요. </p> </div>                       
+                        </div>
+                        <div id="number" class="card">
+                            <div class="details"> <p > 좋아하는 숫자 </p> </div>                      
+                            <div class="details-back"> <p id="detail" class="detail_txt"> </p> </div>                       
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="footer"> <!-- 필수 포함 내용 -->
+                <a name="contact"></a>
+            <div class="box-footer">
+              <h2>Contact.</h2>
+              <ul class="link-sns">
+                <li>
+                  <a href="https://github.com/swonlee615">
+                  <img class="img-github" src="./github.png" alt="깃허브 주소">
+                </a>
+                </li>
+                <li>
+                  <a href="https://poteuri.tistory.com">
+                    <img class="img-velog" src="./tistory.png" alt="블로그 주소">
+                </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/swonlee615/">
+                        <img class="img-insta" src="./instagram.png" alt="">
+                </li>
+              </ul>
+              <p>© 2024 - swonlee615</p>
+            </div>
+            </section>
+        </main>
+
+    
+        
+    </div>
+
+
+
+    <script> 
+    // 좋아하는 숫자 2개 랜덤 (1~7)
+        document.getElementById("number").addEventListener('mouseover', (event) => { 
+            const a = Math.floor(Math.random() * 7);
+            let b = 1;
+            for(;;) {
+                b = Math.floor(Math.random() * 7);
+                if(b != a) break;
+            }
+            
+            document.getElementsByClassName("detail_txt")[6].innerText = a + '\n' + b;
+        });
+        
+    </script>
+
+    
+</body>
+</html>

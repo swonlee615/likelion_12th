@@ -1,0 +1,429 @@
+
+
+/* 기본값 지정 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); 
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+
+html {
+    font-family : "Noto Sans KR", sans-serif;
+    width: 100%;
+    height: 3000px;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: white
+}
+
+#wrap {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+:root {
+    --purple : #942af6;
+    --grey : #616161;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+/* header */
+header {
+    z-index: 100;
+    background: white;
+    width: 100%;
+    position: fixed;
+    height: 50px;
+    display: flex;
+    align-items: center; /* 자식 요소들을 세로축 중앙에 배치 */
+    padding: 25px 10px;
+    border: solid;
+    border-width: 0 0 5px 0;
+    justify-content: flex-start;
+}
+
+header > h1 {
+    display: block;
+    padding: 0 20px;
+}
+
+header .titlenav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: auto;
+    padding: 0 20px;
+}
+
+header .titlenav > p {
+    padding: 20px;
+}
+
+
+/* main 오프닝 페이지 */
+#main {
+    float: left;
+    width: 100%;
+    height: 600px;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+#main .img_container {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    object-fit: cover;
+    flex: 6;
+}
+
+#main .img_container > img {
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    justify-content: center;
+}
+
+.txt_wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex: 4;
+}
+
+#main .txt {
+    width: 25ch;
+    animation: typing 2s steps(23), blink .5s  infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 6px solid;
+    font-family: monospace;
+    font-size: 2em;
+    position: flex;
+    text-align: center;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+  
+  .typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 2em;
+}
+
+
+
+/* about -- 두번째 페이지 */
+#about {
+    float: left;
+    width: 100%;
+    /* height: 1100px; */
+    /* position: relative; */
+    padding-top: 98px;
+}
+
+#about_title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+ .about_container {
+    float: left;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#about .left-image {
+    flex: 3;
+    float: left;
+    width: 300px;
+    /* height: 300px; */
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+#about .about_detail {
+    flex: 7;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2개의 컬럼 */
+    grid-template-rows: repeat(2, 1fr); /* 3개의 로우 */
+    gap: 10px; /* 각 그리드 아이템 사이의 간격 */
+    border-radius: 18px;
+    padding: 30px;
+    height: 100%;
+    border: solid 3px; 
+    background-color: white;
+    margin: 0 25px; 
+    /* float: left;
+    position: relative;
+    width: 55%;
+    height: 84%;
+    border: solid 3px; 
+    background-color: white;   
+    border-radius: 18px;
+    padding: 30px;
+    justify-content: center; */
+}
+
+#about .details{
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: #0C66E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 20px;
+    overflow: hidden;
+    display: inline-grid;
+    color: white;
+}
+.details-back {
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: #ffdd00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 20px;
+    overflow: hidden;
+    display: inline-grid;
+    transform: rotateY(180deg);
+}
+
+#detail {
+    font-weight: 300;
+    font-size: medium;
+}
+
+#about .details-img{
+    border: solid 3px black;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 20px;
+    overflow: hidden;
+    display: inline-grid;
+}
+.details-img-back {
+    border: solid 3px black;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 20px;
+    overflow: hidden;
+    display: inline-grid;
+    transform: rotateY(180deg);
+}
+
+.card {
+    display: inline-grid;
+    transition: .5s;
+    transform: perspective(800px) rotateY(0deg);
+    transform-style: preserve-3d;
+  }
+
+.card:hover {
+    transform: perspective(800px) rotateY(180deg);
+  }
+
+.card > * {
+    grid-area: 1 / 1 / 1 / 1;
+    backface-visibility: hidden;
+}
+
+
+#about .about_detail .detail_txt {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#about .about_detail #detail_img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* footer */
+
+#footer {
+    width: 100%;
+    height: 500px;
+    float: left;
+    text-align: center;
+    margin-top: 200px;
+}
+
+ .box-footer {
+    width: 100%;
+    background-color: white;
+    padding: 100px 0 70px 0;
+}
+
+
+#footer h2 {
+    color: #000000;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+  .box-footer {
+    width: 100%;
+    /* background-color: white; */
+    padding: 80px 0 70px 0;
+}
+  .link-sns ul {
+    display: inline-block;
+    margin: 30px auto;
+}
+  .link-sns li {
+    display: inline-block;
+    padding: 35px;
+    font-size: 12px;
+}
+  .link-sns li a img {
+    margin-bottom: 10px;
+}
+  .img-github,
+  .img-velog,
+  .img-insta {
+    width: 65px;
+}
+  .box-footer p {
+    color: #000000;
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width: 767px) {
+    /* header */
+    header {
+        height: 80px; /* 모바일에서 더 작은 높이로 조정 */
+    }
+
+    header > h1 {
+        font-size: 18px; /* 제목 폰트 크기 조정 */
+    }
+
+    header .titlenav {
+        margin-left: 10px; /* 타이틀 네비게이션 여백 조정 */
+    }
+
+    header .titlenav > p {
+        padding: 10px; /* 네비게이션 항목 간격 조정 */
+    }
+
+    /* main 오프닝 페이지 */
+    #main {
+        height: auto; /* 모바일에서 높이를 자동으로 조정 */
+    }
+
+    #main .img_container {
+        width: 200px; /* 이미지 컨테이너 크기 조정 */
+        height: 200px; /* 이미지 컨테이너 크기 조정 */
+    }
+
+    #main .img_container > img {
+        height: 200px; /* 이미지 크기 조정 */
+    }
+
+    .txt_wrapper {
+        flex: 3; /* 텍스트 래퍼 비율 조정 */
+    }
+
+    #main .txt {
+        font-size: 1.5em; /* 텍스트 폰트 크기 조정 */
+    }
+
+    .typing-demo {
+        font-size: 1.5em; /* 텍스트 폰트 크기 조정 */
+    }
+
+    /* about -- 두번째 페이지 */
+    #about {
+        padding-top: 50px; /* 상단 패딩 조정 */
+        height: auto; /* 높이 자동 조정 */
+    }
+
+    #about .left-image {
+        margin: unset;
+        padding: 120px;
+    }
+
+    #about .about_detail {
+        grid-template-columns: repeat(2, 1fr); /* 그리드 컬럼 수 조정 */
+        grid-template-rows: repeat(4, 1fr); /* 그리드 컬럼 수 조정 */
+    }
+
+    #about .about_detail .detail_txt {
+        font-size: 1.2rem; /* 디테일 텍스트 폰트 크기 조정 */
+    }
+
+    /* footer */
+    #footer {
+        height: auto; /* 높이 자동 조정 */
+    }
+
+    #footer h2 {
+        font-size: 30px; /* 푸터 헤더 폰트 크기 조정 */
+    }
+
+    .box-footer {
+        padding: 50px 0; /* 푸터 박스 패딩 조정 */
+    }
+
+    .link-sns li {
+        padding: 20px; /* SNS 링크 항목 간격 조정 */
+    }
+
+    .box-footer p {
+        margin-top: 30px; /* 푸터 문단 상단 여백 조정 */
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 844px) {
+    #about .about_detail {
+        grid-template-columns: repeat(3, 1fr); /* 그리드 컬럼 수 조정 */
+        grid-template-rows: repeat(3, 1fr); /* 그리드 컬럼 수 조정 */
+    }
+}

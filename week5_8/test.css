@@ -1,0 +1,73 @@
+/* archive -- 세번째 페이지 */
+#archive_title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+/* archive 슬라이더 디자인 */
+.slide_container input {
+    display: none;
+    float: left;
+    height: auto;
+}
+
+.slidewrap {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: solid 3px;
+}
+
+.slidewrap .slidelist {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.slidewrap .slidelist > li {
+    display: none;
+    vertical-align: top;
+    width: 100%;
+    transition: all .3s;
+}
+
+.slidewrap .slidelist > li:first-child {
+    display: block;
+}
+
+.slidewrap .slidelist > li > a {
+    display: block;
+    position: relative;
+}
+
+.slidewrap .slidelist >li > a img {
+    width: 100%;
+}
+
+.slidewrap .slidelist label {
+    position: absolute;
+    /* z-index: 10; */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 50px;
+    cursor: pointer;
+}
+
+.slidewrap .slidelist label.left {
+    left: 10px;
+    background: url(./left.png) center center / 100% no-repeat;
+}
+
+.slidewrap .slidelist lable.right {
+    right: 10px;
+    background: url(./right.png) center center / 100% no-repeat;
+}
